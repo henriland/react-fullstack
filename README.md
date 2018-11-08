@@ -1,1 +1,1 @@
-# react-fullstack
+# React project
