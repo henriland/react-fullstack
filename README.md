@@ -1,3 +1,3 @@
 # React project
 
-Todo...
+React & NodeJS project
