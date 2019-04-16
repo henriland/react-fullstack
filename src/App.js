@@ -4,8 +4,9 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
 import NotFound from './pages/notfound'
+import Footer from './templates/footer'
 
-import './App.css';
+import './assets/css/App.css';
 
 class App extends Component {
   render() {
@@ -27,13 +28,16 @@ class App extends Component {
 				      </ul>	    	
 			    	</div>
 			    	<Switch>
-			    	<Route exact path="/" component={Home} />
-      				<Route path="/login" component={Login} />
-      				<Route path="/register" component={Register} />
-      				<Route component={NotFound} />
-      			</Switch>
+			    		<Route exact path="/" component={Home} />
+      					<Route path="/login" component={Login} />
+      					<Route path="/register" component={Register} />
+      					<Route component={NotFound} />
+      				</Switch>
 			  	</Router>
-        </header>    
+        </header>
+
+		<Footer title={Footer}/>
+		
       </div>
     );
   }

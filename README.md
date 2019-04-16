@@ -1,3 +1,3 @@
-# React project
+# React and Node.js
 
-React & NodeJS project
+A portal using React and Node.js.
