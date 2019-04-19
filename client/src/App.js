@@ -4,8 +4,6 @@ import Home from './pages/home'
 import Login from './pages/login'
 import Register from './pages/register'
 import NotFound from './pages/notfound'
-import Authenticate from './components/authenticate';
-import Secret from './components/secret';
 import Footer from './templates/footer'
 
 import './assets/css/App.css';
@@ -31,7 +29,6 @@ class App extends Component {
 			    	</div>
 			    	<Switch>
 			    		<Route exact path="/" component={Home} />
-			    		<Route path="/secret" component={Authenticate(Secret)} />
       					<Route path="/login" component={Login} />
       					<Route path="/register" component={Register} />
       					<Route component={NotFound} />
