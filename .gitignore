@@ -5,13 +5,15 @@
 /.pnp
 .pnp.js
 client/node_modules
+server/node_modules
 
 # testing
 /coverage
 
 # production
 /build
-client/build/
+client/build
+server/build
 
 # misc
 .DS_Store
