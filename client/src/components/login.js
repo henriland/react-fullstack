@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
-/* Import element styles */
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
+/* Import styles */
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 class Login extends Component {
   constructor() {
@@ -16,7 +16,6 @@ class Login extends Component {
       }
       this.handleSubmit = this.handleSubmit.bind(this)
       this.handleChange = this.handleChange.bind(this)
-
   }
 
   handleChange(event) {
@@ -62,21 +61,21 @@ class Login extends Component {
           <div className="Login">
             <section className="Login-section">
               <h1>Login</h1>
-              <form className="form-horizontal">
+              <form>
                 <Input  type="text"
                         id="username"
                         name="username"
                         placeholder="Username"
                         value={this.state.username}
                         onChange={this.handleChange} />
-
+                <br />
                 <Input  placeholder="Password"
                         type="password"
                         name="password"
                         value={this.state.password}
                         onChange={this.handleChange} />
-
-                <button onClick={this.handleSubmit} type="primary submit">Login</button>
+                <br />
+                <Button onClick={this.handleSubmit} type="submit" variant="contained" color="primary">Login</Button>
               </form>
             </section>            
           </div>

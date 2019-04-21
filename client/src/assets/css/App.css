@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 .App {
   text-align: center;
@@ -47,4 +47,11 @@
 }
 .App-link {
   color: #61dafb;
+}
+.App button {
+  margin-top: 20px;
+}
+.App input {
+  margin-top: 15px;
+  text-align: center;
 }

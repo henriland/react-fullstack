@@ -35,8 +35,11 @@ class Menu extends Component {
             <div>
                 {loggedIn ? (
                     <div>
-                      <Link to="#" onClick={this.logout}>
-                      <span>logout</span></Link>
+                      <ul>
+                        <li>
+                          <Link to="#" onClick={this.logout}>Logout</Link>
+                        </li>
+                      </ul>
                     </div>
                 ) : (
                     <div>

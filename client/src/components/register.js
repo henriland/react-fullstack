@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-/* Import element styles */
-import Form from 'antd/lib/form';
-import Input from 'antd/lib/input';
-import Button from 'antd/lib/button';
+/* Import styles */
+import Button from '@material-ui/core/Button';
+import Input from '@material-ui/core/Input';
 
 class Register extends Component {
 	constructor() {
@@ -53,24 +52,26 @@ class Register extends Component {
 
 render() {
 	return (
-		<div>
-			<h1>Register</h1>
-			<form>
-				<Input 	type="text"
-								id="username"
-								name="username"
-								placeholder="username"
-								value={this.state.username}
-								onChange={this.handleChange} />
-
-				<Input 	placeholder="password"
-								type="password"
-								name="password"
-								value={this.state.password}
-								onChange={this.handleChange} />
-
-				<Button onClick={this.handleSubmit} type="primary">Register</Button>
-			</form>
+    <div className="Login">
+      <section className="Login-section">
+				<h1>Register</h1>
+				<form>
+					<Input 	type="text"
+									id="username"
+									name="username"
+									placeholder="Username"
+									value={this.state.username}
+									onChange={this.handleChange} />
+          <br />
+					<Input 	placeholder="Password"
+									type="password"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleChange} />
+          <br />
+          <Button onClick={this.handleSubmit} type="submit" variant="contained" color="primary">Login</Button>
+				</form>
+			</section>
 		</div>
 
 	)
