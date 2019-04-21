@@ -48,8 +48,8 @@ class Login extends Component {
                   })
               }
           }).catch(error => {
-              console.log('login error: ')
               console.log(error);
+              alert("There is no user with the information given.");
           })
   }
 

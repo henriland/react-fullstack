@@ -36,46 +36,44 @@ class Register extends Component {
 				console.log(response)
 				if (!response.data.errmsg) {
 					console.log('successful signup')
-					this.setState({ //redirect to login page
-						redirectTo: '/login'
-					})
+					alert("Account successfully created!");
+					this.props.history.push("login");
 				} else {
-					console.log('username already taken')
+					console.log('username already taken');
+					alert("The username has already been taken");
 				}
 			}).catch(error => {
-				console.log('signup error: ')
 				console.log(error)
-
+				alert("Signup failed!");
 			})
 	}
 
 
-render() {
-	return (
-    <div className="Login">
-      <section className="Login-section">
-				<h1>Register</h1>
-				<form>
-					<Input 	type="text"
-									id="username"
-									name="username"
-									placeholder="Username"
-									value={this.state.username}
-									onChange={this.handleChange} />
-          <br />
-					<Input 	placeholder="Password"
-									type="password"
-									name="password"
-									value={this.state.password}
-									onChange={this.handleChange} />
-          <br />
-          <Button onClick={this.handleSubmit} type="submit" variant="contained" color="primary">Login</Button>
-				</form>
-			</section>
-		</div>
-
-	)
-}
+	render() {
+		return (
+	    <div className="Login">
+	      <section className="Login-section">
+					<h1>Register</h1>
+					<form>
+						<Input 	type="text"
+										id="username"
+										name="username"
+										placeholder="Username"
+										value={this.state.username}
+										onChange={this.handleChange} />
+	          <br />
+						<Input 	placeholder="Password"
+										type="password"
+										name="password"
+										value={this.state.password}
+										onChange={this.handleChange} />
+	          <br />
+	          <Button onClick={this.handleSubmit} type="submit" variant="contained" color="primary">Login</Button>
+					</form>
+				</section>
+			</div>
+		)
+	}
 }
 
 export default Register
